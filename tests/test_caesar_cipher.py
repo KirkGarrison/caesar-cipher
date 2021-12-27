@@ -1,10 +1,9 @@
 from caesar_cipher.caesar_cipher import encrypt, decrypt
-from caesar_cipher.crack import crack
 
 
 def test_encrypt_shift_1():
     actual = encrypt("CAESAR CIPHER DEMO", 3)
-    expected = "FDHVDUqFLSKHUqGHPR"
+    expected = "FDHVDU FLSKHU GHPR"
     assert actual == expected
 
 
@@ -26,10 +25,10 @@ def test_uppercase():
     assert actual == expected
 
 
-# def test_with_whitespace():
-#     actual = encrypt("apples and bananas", 1)
-#     expected = "bqqmft boe cbobobt"
-#     assert actual == expected
+def test_with_whitespace():
+    actual = encrypt("apples and bananas", 1)
+    expected = "bqqmft boe cbobobt"
+    assert actual == expected
 
 
 # def test_with_non_alpha():
